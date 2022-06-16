@@ -1,0 +1,7 @@
+oeis_parsed.log
+oeis_parsed.sqlite3
+log/
+__pycache__/
+log/
+oeis_parsed.sqlite3-journal
+synthetic/__pycache__/

@@ -1,0 +1,7 @@
+combined_results_v1 contains information about oeis classification
+in each column the following code holds:
+0 = we are pretty sure this sequence does not belong to this category
+1 = it is likely that this sequence does not belong to this category
+2 = we are unsure about this sequence with respect to thhis category
+3 = it is likely that this sequence does belong to this category
+4 = we are pretty sure this sequence does belong to this category
