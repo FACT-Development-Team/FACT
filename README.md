@@ -6,10 +6,30 @@ Integer sequences are of central importance to the modeling of concepts admittin
 
 This repository consists of: 
 
-## FACTLIB
+### FACTLIB
 
 A library for generation of synthetic sequences and selection of sequences from OEIS
 
-## Benchmarking
+### Benchmarking
 
 A benchmarking setup with a range of models and tasks as well as apropriate evaluation metrics.
+
+
+## Contact
+Feel free to contact <akastrati@ethz.ch> and <belcak@ethz.ch> in case you have any questions.
+
+## Acknowledgements
+In alphabetical order.
+
+ * Peter Belcak (maintainer)
+ * Emanual Jampen (OEIS data processing)
+ * Ard Kastrati (maintainer, OEIS data processing, synthetic sequence generation)
+ * Flavio Schenker (baseline model implementation)
+ * Neil Sloane (the author and maintainer of The Online Encyclopedia of Integer Sequences <https://oeis.org/>)
+
+ ## OEIS License
+ This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
+ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+ ## FACT License
+ This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
