@@ -15,8 +15,9 @@ A library for generation of synthetic sequences and selection of sequences from 
 A benchmarking setup with a range of models and tasks as well as apropriate evaluation metrics.
 
 ### How to access the data?
-Simply get it from <https://1drv.ms/u/s!Ah0yjm0w0EzPuLs8iONvn8I0RZx8-A?e=s5CwPm>.
-(This is a temporary solution while we're setting up a dedicated server with a website for the dataset.)
+Simply get it from the ETH Polybox!
+
+https://polybox.ethz.ch/index.php/s/Q8OlXDLHMGfvaVy
 
 
 ## Contact
