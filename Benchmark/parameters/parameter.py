@@ -1,12 +1,11 @@
 import os
-# directory = os.path.join("C:\\","Users","Flavio","Documents","Bachelorarbeit","local")
-directory = os.path.join("/","itet-stor","flaviosc","net_scratch","ba")
+directory = os.path.join("/","absolute","path","to","your","local","folder")
 
 parameters = {
     # general parameters
     "directory" : directory,
     "seq_length": 50,
-    "debug": True,
+    "debug": False,
     "wandb": False,
     "test_immediately": True,
     "encoding": "text",
