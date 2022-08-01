@@ -5,7 +5,7 @@ The benchmark is composed of many experiments. An experiment is a specific model
 A detailed explanation on how to launch an experiment is given in the section **"Training a model"**.
 
 ## Initialize Workspace
-1. download the datasets from "todo" to your local machine. This requires about 1 GB of space.
+1. download the datasets from [Polybox](https://polybox.ethz.ch/index.php/s/3U2aJrRNQCOWit9) to your local machine. This requires about 1 GB of space.
 2. create a local directory called `local` (or any other name).
 3. create two subfolders called `local/data` and `local/trained_models`
 4. make sure that your local directory has enough space to store your experiments. One experiment can require up to 1-2 GB of space.
