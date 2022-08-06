@@ -10,14 +10,14 @@ import concurrent.futures
 from timer         import start_timer
 from exit_scope    import close_when_done
 from setup_logging import setup_logging
-from sql_synthetic_generator import generate_synthetic_polynomial, 
+from sql_synthetic_generator import (generate_synthetic_polynomial, 
                                     generate_synthetic_trigonometric, 
                                     generate_synthetic_exponential, 
                                     generate_synthetic_modulo,
                                     generate_synthetic_prime, 
                                     generate_synthetic_periodic,
                                     generate_synthetic_finite,
-                                    generate_synthetic_group
+                                    generate_synthetic_group)
 
 dataset_type = 'exponential' # Can be polynomial, trigonometric, exponential, modulo, prime, periodic, finite, group
 

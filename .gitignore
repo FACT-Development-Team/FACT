@@ -5,3 +5,4 @@ __pycache__/
 log/
 oeis_parsed.sqlite3-journal
 synthetic/__pycache__/
+.DS_Store

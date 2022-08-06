@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jun  3 11:49:35 2021
-
+This file contains the functions that are used to annotate the database.
+See individual docstrings for more details.
 """
-
 
 import numpy as np
 import sqlite3
@@ -15,7 +15,6 @@ class Error(Exception):
 
 class InvalidNameError(Error):
     """raised when the category_name contains "# " or "\n" or " ". """
-
 
 class Anotator():
     def __init__(self, category_name, tests, aggregator):
@@ -43,9 +42,6 @@ class Anotator():
         self.anotate_all_sequences()
         self.save_anotations_to_file()
         self.save_to_overview()
-
-
-
 
     def __create_cursor(self):
         connection = sqlite3.connect('C:/OEISDB/oeis_parsed.sqlite3')
