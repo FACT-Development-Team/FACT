@@ -20,6 +20,10 @@ https://polybox.ethz.ch/index.php/s/sV5v8zeDZm6ArTd
 
 More information can be found in the README distributed with the version of the dataset.
 
+### QuickStart Guide
+
+You will find a QuickStart Jupyter Notebook file under `./QuickStart`. `pytorch` and `torchvision` are its two notable requirements.
+
 ### OEIS Processing
 You will find all code and more information about the processing steps for OEIS data that was included into the FACT dataset under `./OEIS Processing`.
 We recommend starting with the `README.md` file in that directory.
@@ -46,6 +50,10 @@ Feel free to contact <akastrati@ethz.ch> and <belcak@ethz.ch> in case you have a
  This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
- ### FACT
+ ### FACT Dataset
  This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+ ### FACT Benchmarking and FACTLIB
+ This work is licensed under the Creative Commons Attribution 4.0 International License.
+ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
