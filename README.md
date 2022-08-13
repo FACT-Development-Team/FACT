@@ -12,6 +12,7 @@ The main FACT dataset is available as a SQLite database on the link below. You c
 https://polybox.ethz.ch/index.php/s/XcUS8GttrM75HyK
 
 To quickly inspect the dataset, tools such as [DB Browser (SQLite)](https://sqlitebrowser.org/) might come handy.
+There is a `UNIQUE INDEX` on the `oeis_id` column to speed up listing and ID lookups. If you plan to search the dataset through a different column, consider indexing it to improve performance.
 
 Additionally, there is also a sub-dataset created specifically for our benchmark that contains no NLP annotations or other additional information that is solicited for OEIS entries.
 This file is significantly smaller and contains: the `oeis_id`s uniquely identifying each sequence, the `sequence` itself, and some flag (`1` or `0`) fields marking whether the sequence is `trigonometric`, `polynomial`, `exponential`, etc..

@@ -9,6 +9,9 @@ from experiments import Experiment
 from dataset import Dataset
 from parameters import parameters
 
+import tensorflow as tf
+tf.random.set_seed(1324)
+
 
 test_sources = ["synthetic", "oeis"]
 

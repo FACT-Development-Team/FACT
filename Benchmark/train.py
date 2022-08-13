@@ -8,6 +8,9 @@ from experiments import Experiment
 from dataset import Dataset
 from parameters import parameters
 
+import tensorflow as tf
+tf.random.set_seed(1324)
+
 dataset = Dataset(debug=parameters["debug"], parameters=parameters)
 
 tasks = ["classification", "similarity", "next", "continuation", "generation", "unmasking"]

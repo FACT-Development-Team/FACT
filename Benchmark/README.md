@@ -5,9 +5,10 @@ This piece of documentation describes how our benchmark can be used to reproduce
 The benchmark is composed of a number of experiments.
 An experiment is a specific model architecture, trained on a specific task, within a category or across all of them -- in other words, it's a triple (architecture, task, data span).
 A detailed explanation on how to launch an experiment is given in the section **Training a model**.
+Wherever possible, the default random seed is 1234.
 
 ## Workspace Initialization
-1. Download the already-preprocessed, stripped-down, and split FACT dataset from [Polybox](https://polybox.ethz.ch/index.php/s/sV5v8zeDZm6ArTd) to your local machine. This requires about 1 GB of space, and there is a separate README for the archive.
+1. Download the already-preprocessed, stripped-down, and split FACT dataset from [Polybox](https://polybox.ethz.ch/index.php/s/sV5v8zeDZm6ArTd) to your local machine. This requires about 1 GB of space, and there is a separate README for the archive. In short, size ratios between training, validation, synthetic testing, and OEIS testing datasets are 9:1:1:1.
 2. Create a local directory called `local` (or any other name). This will be the directory where all of the experimental data will be stored.
 3. Create two subfolders called `local/data` and `local/trained_models`. The former will store the training data while the latter will hold model checkpoints.
 4. Make sure that your `local` directory has enough space to store all your experiments. One experiment can require up to 1-2 GB of space.
