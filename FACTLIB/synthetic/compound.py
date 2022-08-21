@@ -24,7 +24,7 @@ class Add():
 
     def set_terminals(terminals):
         Add.terminals = terminals
-    
+
     def set_non_terminals(non_terminals):
         Add.non_terminals = non_terminals
 
@@ -63,7 +63,7 @@ class Sub():
 
     def set_terminals(terminals):
         Sub.terminals = terminals
-    
+
     def set_non_terminals(non_terminals):
         Sub.non_terminals = non_terminals
 
@@ -90,7 +90,7 @@ class Mult():
     def __init__(self, arg1=None, arg2=None):
         self.arg1 = arg1
         self.arg2 = arg2
-      
+
     def finish(self, generator):
         self.arg1 = generator.generate(terminals=Mult.terminals, non_terminals=Mult.non_terminals, current=self.arg1)
         self.arg2 = generator.generate(terminals=Mult.terminals, non_terminals=Mult.non_terminals, current=self.arg2)
@@ -112,7 +112,7 @@ class Mult():
     def to_string(self):
         left = "("
         right = ""
-        
+
         if isinstance(self.arg1, Add) or isinstance(self.arg1, Sub):
             left += '(' + self.arg1.to_string() + ')'
         else:
@@ -168,7 +168,7 @@ class Pow():
             left += '(' + self.arg1.to_string() + ')'
         else:
             left += self.arg1.to_string()
-        right += '**' 
+        right += '**'
         if isinstance(self.arg2, Var):
             right += '(' + self.arg2.to_string() + '))'
         else:
