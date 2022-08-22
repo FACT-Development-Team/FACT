@@ -8,7 +8,7 @@ There are no dependencies needed in this repository (other than having Python 3.
 
 ## Using FACTLIB
 
-For a quick run, you can simply use the following command:
+For a quick run, go to `cd FACTLIB/` and you can simply use the following command:
 ```python
 python3 main.py
 ```
