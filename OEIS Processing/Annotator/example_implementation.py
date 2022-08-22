@@ -100,13 +100,15 @@ def classification_method_3(data_dict):
 def aggregator(results):
     if results[0] == 1 and results[1] == 2:
         return 3
-    if results[2] == 1:
-        return 2
+    #if results[2] == 1:
+    #    return 2
     return 0
 
 def main():
 
-    my_list_of_classification_methods = [classification_method_1, classification_method_2, classification_method_3]
+    my_list_of_classification_methods = [classification_method_1, classification_method_3]
 
     my_Anotator = Anotator("my_example_category", my_list_of_classification_methods, aggregator)
     my_Anotator.run_and_save()
+
+main()
