@@ -31,7 +31,6 @@ We recommend starting with the `README.md` file in that directory.
 
 ### FACTLIB
 A library for generation of synthetic sequences, available under `./FACTLIB`.
-Simply invoke `pip install -r requirements.txt` to have it as a working module.
 Individual generation sub-modules and functions, main ones documented with docstrings, can then be invoked directly or used as ready-made snippets as in `main.py`.
 
 ### Benchmarking Setup
