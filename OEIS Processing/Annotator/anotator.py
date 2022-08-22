@@ -17,12 +17,12 @@ class InvalidNameError(Error):
     """raised when the category_name contains "# " or "\n" or " ". """
 
 class Anotator():
-    def __init__(self, category_name, tests, aggregator):
+    def __init__(self, category_name, tests, aggregator, database_size=342305):
         if "# " in category_name or "\n" in category_name or " " in category_name:
             print("do not use \"# \" or \"\\n\" or \" \" in the category name")
             raise InvalidNameError
 
-        self.database_size = 342305
+        self.database_size = database_size
         self.anotations = np.zeros(self.database_size)
         self.category_name = category_name
         self.aggregator = aggregator
@@ -44,7 +44,7 @@ class Anotator():
         self.save_to_overview()
 
     def __create_cursor(self):
-        connection = sqlite3.connect('C:/OEISDB/oeis_parsed.sqlite3')
+        connection = sqlite3.connect('oeis_parsed.sqlite3')
         sql_cursor = connection.cursor()
         return sql_cursor
 

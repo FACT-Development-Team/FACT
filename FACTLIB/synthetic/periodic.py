@@ -3,6 +3,10 @@ from random import randrange
 import sys
 
 class Periodic():
+    """
+    Periodic is a non_terminal that is used to generate periodic functions. The way how this is done is by creating an expression and specifyin periodicity,
+    in which case the experession is repeated after periodicty ends.
+    """
     terminals = []
     non_terminals = []
 

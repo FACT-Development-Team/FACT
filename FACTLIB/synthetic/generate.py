@@ -3,13 +3,18 @@ import copy
 from random import randrange, choices, randint
 
 class Generator():
+    """
+    Generator is the main class of FACTLIB. It uses recursion and randomness to generate a sequence out a given grammar (with Komplexity universal prior).
+    Length can also be specified, in which case, a uniformaly at random sequence is chosen out of all sequences with the specified length that can be generated
+    with the given context-free grammar.
+    """
     def __init__(self, length=None):
         self.options = 1
         self.length = generate_coinflips() if length is None else length
 
     def generate(self, terminals, non_terminals, current=None):
         #print("CUrrent length ", str(self.length), " and options, ", str(self.options))
-        if current == None:  
+        if current == None:
             current = self.get_item(terminals, non_terminals)
         self.options += current.get_options() - 1 #if current.is_non_terminal() else 0
         self.options = max(self.options, 1)
@@ -37,4 +42,3 @@ def generate_coinflips():
 
 def biased_coin(p):
     return 0 if p == 0 else choices([0, 1], weights=(1 - p, p), k=1)[0]
-

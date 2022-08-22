@@ -1,8 +1,14 @@
 from synthetic.generate import Generator
 from synthetic.number import Var
 import sys
-
+"""
+Here we have nodes that are compounds of 1 or several other nodes.
+"""
 class Add():
+    """
+    Add is a nonterminal that has two possible production rules (for the left and the right one).
+    Each of the subnodes can be terminals or non_terminals. Those are chosen, based on the given sets defined for Add.
+    """
     terminals = []
     non_terminals = []
 
@@ -42,6 +48,11 @@ class Add():
 
 
 class Sub():
+    """
+    Sub is a nonterminal that has two possible production rules (for the left and the right one).
+    Each of the subnodes can be terminals or non_terminals. Those are chosen, based on the given sets defined for Sub.
+    """
+
     terminals = []
     non_terminals = []
 
@@ -84,6 +95,10 @@ class Sub():
         return self.arg1.get_length() + self.arg2.get_length() + 1
 
 class Mult():
+    """
+    Mult is a nonterminal that has two possible production rules (for the left and the right one).
+    Each of the subnodes can be terminals or non_terminals. Those are chosen, based on the given sets defined for Mult.
+    """
     terminals = []
     non_terminals = []
 
@@ -128,6 +143,15 @@ class Mult():
         return self.arg1.get_length() + self.arg2.get_length() + 1
 
 class Pow():
+    """
+    Pow is a nonterminal that has two possible production rules (for the base and the exponent).
+    Each of the subnodes can be terminals or non_terminals. Those are chosen, based on the given sets defined for Pow.
+    For Pow we distinguish the terminals and non_terminals for base and exponent. In other words, those can different
+    for the base and different for the exponent. This allows to create exponential functions, but also polynomials with
+    constant exponent. This is different from other compound nodes (example for Add left and right summand share the same
+    terminals and non_terminals).
+    """
+
     terminals_base = []
     non_terminals_base = []
 

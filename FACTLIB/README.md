@@ -8,6 +8,11 @@ There are no dependencies needed in this repository (other than having Python 3.
 
 ## Using FACTLIB
 
+For a quick run, you can simply use the following command:
+```python3 main.py
+```
+The above command should generate an example sequence for each category.
+
 The framework currently supports only class_types: ClassType.POLYNOMIAL, ClassType.TRIGONOMETRIC, ClassType.EXPONENTIAL, ClassType.PRIME, ClassType.MODULO, ClassType.PERIODIC, ClassType.PERIODIC, ClassType.FINITE. Note that classes like unique, bounded and increasing are not generated with context free grammars, but are meta-categories.
 
 An example generating a polynomial of length 3:

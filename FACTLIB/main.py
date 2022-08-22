@@ -10,6 +10,9 @@ from synthetic.finite import Finite
 from generate_from_class import generate_from_class
 from generate_from_class import ClassType
 
+"""
+A simple example how to generate a sequence with length 3 from every class type.
+"""
 for class_type in ClassType:
     expression = generate_from_class(class_type, length=3)
     print(class_type)

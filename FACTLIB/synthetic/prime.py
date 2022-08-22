@@ -17,6 +17,10 @@ from synthetic.generate import Generator
 import sys
 
 class Prime():
+    """
+    Prime is a non_terminal used to generate prime related sequences. The way how this is done, is we generate sequences by giving inductive bias
+    in using prime numbers. Instead of using number k, sequences can also use prime(k) which returns the k'th prime number from {2,3,5, ....}.
+    """
     terminals = []
     non_terminals = []
 

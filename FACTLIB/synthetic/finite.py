@@ -2,6 +2,10 @@ from synthetic.generate import Generator
 from random import randrange
 
 class Finite():
+    """
+    Finite is a nonterminal that has one possible production rules (any expression) and it has a value between 1 and 500 which defines the end of the sequence.
+    The expression can be terminals or non_terminals. Those are chosen, based on the given sets defined for Mult.
+    """
     terminals = []
     non_terminals = []
 

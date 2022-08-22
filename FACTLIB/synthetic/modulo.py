@@ -2,6 +2,12 @@ from synthetic.generate import Generator
 import sys
 
 class Modulo():
+    """
+    Modulo is a tuple of two nonterminals (exp1 % exp2).
+    The expression can be terminals or non_terminals. Those are chosen, based on the given sets defined for Modulo.
+    Special case is modulo 0. In this case we define exp % 0 = 0.
+    """
+
     terminals = []
     non_terminals = []
 
@@ -31,8 +37,6 @@ class Modulo():
 
     def to_string(self):
         return 'mod(' + self.arg1.to_string() + ',' + self.arg2.to_string() + ')'
-    
+
     def get_length(self):
         return self.arg1.get_length() + self.arg2.get_length() + 1
-    
-    
