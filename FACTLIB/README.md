@@ -9,7 +9,8 @@ There are no dependencies needed in this repository (other than having Python 3.
 ## Using FACTLIB
 
 For a quick run, you can simply use the following command:
-```python3 main.py
+```python
+python3 main.py
 ```
 The above command should generate an example sequence for each category.
 
@@ -26,7 +27,7 @@ print(expression.to_string())
 print([expression.evaluate(i) for i in range(10)])
 ```
 
-One can also provide as argument `length=None`, in which case FACTLIB generates a polynomial with the length computed based on Universal Prior [1].
+One can also provide as argument `length=None`, in which case FACTLIB generates a polynomial with the length computed based on Universal Prior [^fn1].
 
 ## Extending FACTLIB
 
@@ -103,3 +104,6 @@ def get_length(self):
 FACTLIB has also a `evolution/generate.py`. This is in experimental stages. However it is runnable.
 This entry point is a more complex generator, which instead of simply sampling terminals and nonterminals, it also provides evolutionary techniques such as cross-over and mutation.
 This is however at this point not part of the main paper.
+
+
+[^fn1]: Discovering Neural Nets with Low Kolmogorov Complexity and High Generalization Capability - Juergen Schmidhuber
