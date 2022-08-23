@@ -3,12 +3,15 @@
 A library for synthetic generation of integer sequences to the style of OEIS and with the notions of Kolmogorov complexity in mind.
 
 ## How to Install
-There are no dependencies needed in this repository (other than having Python 3.X). You can directly use this module independently from other parts of the FACT-framework.
-
+There are no dependencies needed in this repository (other than having Python 3.X). You can directly use this module independently from other parts of the FACT-framework. We suggest to use conda and Python 3.8:
+```
+conda create --name factlib python=3.8
+conda activate factlib
+```
 
 ## Using FACTLIB
 
-For a quick run, you can simply use the following command:
+For a quick run, go to `cd FACTLIB/` and you can simply use the following command:
 ```python
 python3 main.py
 ```
