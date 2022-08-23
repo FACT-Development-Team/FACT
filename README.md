@@ -7,17 +7,15 @@ Integer sequences are of central importance to the modeling of concepts admittin
 This repository consists of the OEIS processing code, FACTLIB, and the Benchmarking Setup. Each is described below in more detail.
 
 ## Accessing the Dataset
-The main FACT dataset is available as a SQLite database on the link below. You can use any SQLite library to make the connection from your code to the dataset.
+The main FACT dataset is available as a SQLite database with the ETH Research Collection. You can use any SQLite library to make the connection from your code to the dataset.
 
-https://polybox.ethz.ch/index.php/s/XcUS8GttrM75HyK
+[DOI 10.3929/ethz-b-000562705](https://doi.org/10.3929/ethz-b-000562705)
 
 To quickly inspect the dataset, tools such as [DB Browser (SQLite)](https://sqlitebrowser.org/) might come handy.
 There is a `UNIQUE INDEX` on the `oeis_id` column to speed up listing and ID lookups. If you plan to search the dataset through a different column, consider indexing it to improve performance.
 
 Additionally, there is also a sub-dataset created specifically for our benchmark that contains no NLP annotations or other additional information that is solicited for OEIS entries.
-This file is significantly smaller and contains: the `oeis_id`s uniquely identifying each sequence, the `sequence` itself, and some flag (`1` or `0`) fields marking whether the sequence is `trigonometric`, `polynomial`, `exponential`, etc..
-
-https://polybox.ethz.ch/index.php/s/sV5v8zeDZm6ArTd
+This file is significantly smaller and contains: the `oeis_id`s uniquely identifying each sequence, the `sequence` itself, and some flag (`1` or `0`) fields marking whether the sequence is `trigonometric`, `polynomial`, `exponential`, etc.. It is also a part of the above repository held by the ETH Research Collection.
 
 More information can be found in the README distributed with the version of the dataset.
 
