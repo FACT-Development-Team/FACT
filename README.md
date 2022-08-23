@@ -31,8 +31,14 @@ We recommend starting with the `README.md` file in that directory.
 A library for generation of synthetic sequences, available under `./FACTLIB`.
 Individual generation sub-modules and functions, main ones documented with docstrings, can then be invoked directly or used as ready-made snippets as in `main.py`.
 
+The version found in this repository is the most recent one.
+The initial version, coupled with the paper, can be found under [DOI 10.3929/ethz-b-000565638](https://doi.org/10.3929/ethz-b-000565638).
+
 ### Benchmarking Setup
 A benchmarking setup with a range of models and tasks as well as apropriate evaluation metrics.
+
+The version found in this repository is the most recent one.
+The initial version, coupled with the paper, can be found under [DOI 10.3929/ethz-b-000565644](https://doi.org/10.3929/ethz-b-000565644).
 
 ## Contact and Acknowledgements
 Feel free to contact <akastrati@ethz.ch> and <belcak@ethz.ch> in case you have any questions.
