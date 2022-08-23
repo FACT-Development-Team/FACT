@@ -103,6 +103,12 @@ def get_length(self):
     raise NotImplementedError("This method must be implemented in the inheriting class")
 ```
 
+## Sequence Length
+
+The library only supports at the moment to draw a sequence that is generated with length based on Universal prior or by a specified length. If one desires to generate the shortest expression for a given sequence, then one way to go about it is to generate all rules with increasing length. One would have to adapt the library in this case in not making random choices while generating the rules. One can easily extend the library for this case by doing the following changes:
+    1. Under synthetic/generate.py, replace the get_item() function with a deterministic choice (compared to randrange)
+    2. Under synthetic/generate.py, instead of using one choice only in generate(), iterate among all options and generate recursively all possible sequences.
+
 ## Future steps
 
 FACTLIB has also a `evolution/generate.py`. This is in experimental stages. However it is runnable.
