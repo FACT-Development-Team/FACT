@@ -1,9 +1,5 @@
 # -----------------------------------------------------------
 # Custom Keras metrics and losses for our tasks
-#
-# Released under GNU Public License (GPL)
-# @author Flavio Schenker
-# @email flaviosc@student.ethz.ch
 # -----------------------------------------------------------
 import tensorflow as tf
 import numpy

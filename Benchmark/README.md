@@ -1,6 +1,10 @@
 # Benchmarkign Setup Documentation
 This piece of documentation describes how our benchmark can be used to reproduce our results shown in the corresponding paper.
 
+## License
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
 ## Experiment
 The benchmark is composed of a number of experiments.
 An experiment is a specific model architecture, trained on a specific task, within a category or across all of them -- in other words, it's a triple (architecture, task, data span).
@@ -79,3 +83,5 @@ python3 test.py classification/Dense/polynomial/01-01-22_15-30-00
 ```
 ### Immediate Testing
 Some tasks support immediate testing of your trained model and will print the evaluation on the test-set right after training. To do this, activate the `test_immediately` parameter in `parameter.py`
+
+## License

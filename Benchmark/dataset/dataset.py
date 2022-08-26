@@ -1,9 +1,5 @@
 # -----------------------------------------------------------
 # Dataset wrapper for oeis and synthetic
-#
-# Released under GNU Public License (GPL)
-# @author Flavio Schenker
-# @email flaviosc@student.ethz.ch
 # -----------------------------------------------------------
 
 import numpy as np

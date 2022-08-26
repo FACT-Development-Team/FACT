@@ -1,9 +1,5 @@
 # -----------------------------------------------------------
 # Transformer Subclass of Model Class
-#
-# Released under GNU Public License (GPL)
-# @author Flavio Schenker
-# @email flaviosc@student.ethz.ch
 # -----------------------------------------------------------
 
 from models import Model
