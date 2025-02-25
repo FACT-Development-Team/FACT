@@ -1,6 +1,7 @@
 # Benchmarkign Setup Documentation
 This piece of documentation describes how our benchmark can be used to reproduce our results shown in the corresponding paper.
 
+
 ## License
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
@@ -24,47 +25,60 @@ Wherever possible, the default random seed is 1234.
 
 ## Training a Model
 
-You can launch a new experiment by executing `train.py`.
+To start a new experiment, execute `train.py` with the required parameters.
 
-The script needs to be launched directly in a terminal with the necessary parameters. Syntax:
+**Syntax:**
+
 ```python
-python3 train.py <task> <model-architecture> <category>
+python3 train.py <task> <architecture> <category>
 ```
 
-Running multiple tasks, model-architectures, and categories per instance **is supported**. The resulting experiments will be run in grid mode from left to right.
+You can specify **multiple** values for \<task\>, \<architecture\>, and \<category\> at once. The experiments will be executed in a grid format over all values.
 
-Default parameters:
-* \<task\> = `classification`
-* \<model-architecture\> = `Dense,RNN,Transformer,CNN`
-* \<category\> = all 10 supported categories and across all
 
-Supported parameters:
-* \<task\> = `classification,similarity,next,continuation,generation,unmasking`
-* \<model-architecture\> = `Dense,RNN,Transformer,CNN`
-* \<category\> = `polynomial,exponential,trigonometric,periodic,finite,modulo,prime,bounded,increasing,unique,all`
+### Supported Parameters:
 
-### Example:
-1. Training a recurrent neural-network on the similarity task within the polynomial category.
+**`<task>`**
 
-    command:
-    ```python
-    python3 train.py similarity RNN polynomial
-    ```
-    This will launch **one** experiment.
-2. Training a convolutional neural-network and a random-forest classifier on the classification task within the finite and modulo categories.
+| Value             | Description |
+| -------------- | ------- |
+| classification | (default value) Classifies the input sequence to one or more categories (multiclass). |
+| similarity | Embeds two sequences so that similar ones, such as those from the same category or sharing similar properties, are positioned closer in the embedding space than unrelated sequences. |
+| next | Given two contiguous sub-sequences s1 and s2, the objective of the next sequence-part prediction task is to determine whether the sub-sequence s2 is a valid continuation of s1. |
+| continuation | Suggest the next entry of a given sequence (single-shot). |
+| generation | Suggest the next **n** entries of a given sequence (multi-shot). |
+| unmasking | Unmask **n** randomly selected masked entries in a given sequence. |
 
-    command:
-    ```python
-    python3 train.py classification CNN,RFC finite,modulo
-    ```
-    This will launch **four** experiments.
-3. Training models for all experiments at once.
+**`<architecture>`**
 
-    command:
-    ```python
-    python3 train.py
-    ```
-    This will launch **1x4x11=44!** experiments.
+| Value             | Description | Implementation |
+| --- | --- | --- |
+| Dense | Multi-Layer Perceptron | `models/model_dense.py` |
+| RNN | Long Short-Term Memory | `models/model_rnn.py` |
+| CNN | Convolutional Neural Network | `models/model_cnn.py` |
+| Transformer | Self-Attention Transformer Encoder | `models/model_transformer.py` |
+| KNNC | K-Nearest-Neighbors-Classifier | Scikit-learn: `KNeighborsClassifier` |
+| GNBC | Gaussian-Naive-Bayes-Classifier | Scikit-learn: `GaussianNB` |
+| LSVC | Linear-Support-Vector-Machine-Classifier | Scikit-learn: `LinearSVC` |
+| DTC | Decision-Tree-Classifier | Scikit-learn: `DecisionTreeClassifier` |
+| RFC | Random-Forest-Classifier | Scikit-learn: `RandomForestClassifier` |
+| GBC | Gradient-Boosting-Classifier | Scikit-learn: `GradientBoostingClassifier` |
+
+**`<category>`**
+
+`polynomial, exponential, trigonometric, periodic, finite, modulo, prime, bounded, increasing, unique, all (default)`
+
+**Examples:**
+```python
+python3 train.py similarity RNN polynomial
+```
+Training a recurrent neural-network on the similarity task within the polynomial category. This will launch **1** experiment.
+
+```python
+python3 train.py classification CNN,RFC finite,modulo
+```
+Training a convolutional neural-network, decision-tree and a random-forest-classifier on the classification task within the finite, modulo and prime categories. This will launch **9** experiments.
+
 
 ## Testing a Model
 
@@ -83,5 +97,3 @@ python3 test.py classification/Dense/polynomial/01-01-22_15-30-00
 ```
 ### Immediate Testing
 Some tasks support immediate testing of your trained model and will print the evaluation on the test-set right after training. To do this, activate the `test_immediately` parameter in `parameter.py`
-
-## License
